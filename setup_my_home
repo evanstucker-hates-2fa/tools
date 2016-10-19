@@ -13,3 +13,10 @@ autocmd FileType sh setlocal et sw=4 sts=4
 autocmd FileType puppet setlocal et sw=2 sts=2
 set background=dark
 EOF
+
+# Add my git config
+cat << EOF > ~/.gitconfig
+[user]
+	name = Evans Tucker
+	email = evans.tucker@gmail.com
+EOF
