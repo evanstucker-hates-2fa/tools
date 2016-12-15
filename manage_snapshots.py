@@ -132,30 +132,3 @@ else:
     raise SystemExit("Invalid command options. Valid options are 'create', 'remove', and 'list'.")
 
 Disconnect(si)
-
-etucker@bastion700:/home/tuacct/scripts> cp python_tools/quarterly_patching/manage_snapshots.py
-    if args.name:
-        RemoveSnapshots(args.name)
-    elif args.vmlist:
-        with open(args.vmlist) as infile:
-            read_data = infile.read().splitlines()
-            for server in read_data:
-                print(server)
-                RemoveSnapshots(server)
-            infile.close()
-elif args.command == 'list':
-    print("Listing snapshots:")
-    if args.name:
-        ListSnapshots(args.name)
-    elif args.vmlist:
-        del infile
-        with open(args.vmlist) as infile:
-            read_data = infile.read().splitlines()
-            for server in read_data:
-                print(server)
-                ListSnapshots(server)
-            infile.close()
-else:
-    raise SystemExit("Invalid command options. Valid options are 'create', 'remove', and 'list'.")
-
-Disconnect(si)
